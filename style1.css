@@ -1,0 +1,329 @@
+body {
+  background: linear-gradient(45deg, #FCE4EC, #F8BBD0, #F48FB1);
+}
+
+/* صفحة البداية */
+#welcome {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#welcome h1 {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  color: #8E3157;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 0;
+}
+
+#intro {
+  color: #8E3157;
+  font-size: 25px;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0 12px;
+}
+
+/* الأزرار */
+#button,
+#back,
+.navigation button {
+  background-color: #8E3157;
+  color: white;
+  border-radius: 14px;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 18px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#button {
+  display: block;
+  margin: 20px auto;
+}
+
+#button:hover,
+#back:hover,
+.navigation button:hover {
+  background-color: #B84D78;
+}
+
+#back {
+  display: block;
+  margin: 25px auto;
+}
+
+.navigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* محتوى الصفحات */
+#content {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+
+#content section {
+  display: none;
+}
+
+#content section.active {
+  display: block;
+}
+
+#content h1,
+#content h2 {
+  color: #8E3157;
+}
+
+#content h2 {
+  margin-top: 30px;
+}
+
+#content p {
+  line-height: 1.9;
+  margin: 15px auto;
+  max-width: 700px;
+}
+
+#content ul {
+  text-align: right;
+  line-height: 2;
+  max-width: 700px;
+  margin: 15px auto;
+  padding-right: 30px;
+}
+
+#content hr {
+  border: none;
+  border-top: 1px solid white;
+  margin: 25px 0;
+}
+
+/* شريط التنقل */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px auto;
+}
+
+#pageNumber {
+  color: #8E3157;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* الشاشات الصغيرة */
+@media (max-width: 600px) {
+  #welcome h1 {
+    font-size: 25px;
+    margin: 0 10px;
+  }
+
+  #intro {
+    font-size: 20px;
+    padding: 0 15px;
+  }
+
+  #content {
+    padding: 15px;
+  }
+
+  .navigation {
+    gap: 8px;
+  }
+
+  .navigation button {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+/* شريط التنقل العلوي */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(142, 49, 87, 0.08);
+}
+
+.nav-brand {
+  color: #8E3157;
+  font-size: 22px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-links button {
+  background: transparent;
+  color: #8E3157;
+  border: 1px solid #DFA0B8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links button:hover {
+  background: #8E3157;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .top-nav {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .nav-brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links button {
+    flex: 1 1 40%;
+  }
+}
+/* الصفحة الختامية */
+.credits-page {
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.credits-page h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.credits-subtitle {
+  color: #8E3157;
+  font-size: 19px;
+  margin-top: 0;
+}
+
+.credits-label {
+  color: #8E3157;
+  font-size: 17px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.credits-page h2 {
+  font-size: 23px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.credits-page hr {
+  max-width: 300px;
+  margin: 25px auto;
+}
+
+.credits-footer {
+  margin-top: 40px;
+  color: #8E3157;
+  font-size: 16px;
+  line-height: 1.8;
+}
+/* تذييل الشعارات الرسمية */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(142, 49, 87, 0.2);
+}
+
+/* مجموعتا الشعارات */
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* شعارات المبادرة في اليسار */
+.footer-left {
+  justify-content: flex-start;
+}
+
+/* شعار الجامعة في اليمين */
+.footer-right {
+  justify-content: flex-end;
+}
+
+/* الحجم الأساسي للشعارات */
+.footer-logo {
+  display: block;
+  width: 95px;
+  height: 75px;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+/* شعار الجامعة */
+.university-logo {
+  width: 85px;
+  height: 75px;
+}
+
+/* ملاءمة التابلت والجوال */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 25px 10px;
+    gap: 12px;
+  }
+
+  .footer-logos {
+    gap: 6px;
+  }
+
+  .footer-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .university-logo {
+    width: 75px;
+    height: 75px;
+  }
+  }
